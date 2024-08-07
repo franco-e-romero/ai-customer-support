@@ -70,9 +70,9 @@ export async function POST(req) {
     // const openai = new OpenAI()
     const data = await req.json()
 
-    /****************/
-    /* Open AI Code */
-    /****************/
+    /*************************/
+    /* Start of OpenAI Code */
+    /*************************/
     // const completion = await openai.chat.completions.create({
     //     messages: [
     //         {
@@ -84,9 +84,12 @@ export async function POST(req) {
     //     model: 'gpt-4o-mini',
     //     stream: true,
     // })
+    /**********************/
+    /* End of OpenAI Code */
+    /**********************/
 
     /******************/
-    /* Anthropic Code */
+    /* Start of Anthropic Code */
     /******************/
     const anthropic = new Anthropic();
 
@@ -104,6 +107,9 @@ export async function POST(req) {
         ],
         stream: true,
     });
+    /*************************/
+    /* End of Anthropic Code */
+    /*************************/
 
     const stream = new ReadableStream({
         async start(controller) {
