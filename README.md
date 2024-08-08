@@ -1,4 +1,23 @@
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## AI Customer Support Chatbot
+
+This project showcases an advanced AI-powered customer support chatbot built with Next.js and leveraging the Llama API. This chatbot offers intelligent responses to user inquiries, enhancing customer support experiences.
+
+Key features and technologies:
+- Next.js framework for a robust and efficient frontend
+- Llama API integration for advanced natural language processing
+- Docker containerization for easy deployment and scalability
+- Material-UI (MUI) for a sleek and responsive user interface
+- AWS EC2 and Bedrock API for seamless cloud deployment and AI model integration
+- Git for version control and collaborative development
+- Retrieval-Augmented Generation (RAG) for knowledge-based responses
+
+
+This project demonstrates the power of combining cutting-edge AI technology with modern web development practices to create an efficient, scalable, and intelligent customer support solution.
+
 
 ## Getting Started
 
