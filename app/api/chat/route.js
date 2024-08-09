@@ -1,6 +1,6 @@
 import {NextResponse} from 'next/server'
-// import OpenAI from 'openai'
-import Anthropic from "@anthropic-ai/sdk";
+import OpenAI from 'openai'
+// import Anthropic from "@anthropic-ai/sdk";
 
 const systemPrompt = `
     Welcome to Headstarter, your premier destination for practicing technical interviews with AI in real-time! As the customer support AI, your role is to assist users by providing accurate, clear, and helpful responses to their questions and concerns. Please adhere to the following guidelines when interacting with users:
@@ -67,37 +67,13 @@ Thank you for using Headstarter. We're here to help you succeed in your technica
 `
 
 export async function POST(req) {
-    // const openai = new OpenAI()
+    const openai = new OpenAI()
     const data = await req.json()
 
     /*************************/
     /* Start of OpenAI Code */
     /*************************/
-    // const completion = await openai.chat.completions.create({
-    //     messages: [
-    //         {
-    //             role: 'system', 
-    //             content: systemPrompt
-    //         },
-    //         ...data,
-    //     ],
-    //     model: 'gpt-4o-mini',
-    //     stream: true,
-    // })
-    /**********************/
-    /* End of OpenAI Code */
-    /**********************/
-
-    /******************/
-    /* Start of Anthropic Code */
-    /******************/
-    const anthropic = new Anthropic();
-
-    const completion = await anthropic.messages.create({
-        model: "claude-3-5-sonnet-20240620",
-        // max_tokens: 1000,
-        // temperature: 0,
-        // system: systemPrompt,
+    const completion = await openai.chat.completions.create({
         messages: [
             {
                 role: 'system', 
@@ -105,8 +81,32 @@ export async function POST(req) {
             },
             ...data,
         ],
+        model: 'gpt-4o-mini',
         stream: true,
-    });
+    })
+    /**********************/
+    /* End of OpenAI Code */
+    /**********************/
+
+    /******************/
+    /* Start of Anthropic Code */
+    /******************/
+    // const anthropic = new Anthropic();
+
+    // const completion = await anthropic.messages.create({
+    //     model: "claude-3-5-sonnet-20240620",
+    //     // max_tokens: 1000,
+    //     // temperature: 0,
+    //     // system: systemPrompt,
+    //     messages: [
+    //         {
+    //             role: 'system', 
+    //             content: systemPrompt
+    //         },
+    //         ...data,
+    //     ],
+    //     stream: true,
+    // });
     /*************************/
     /* End of Anthropic Code */
     /*************************/
