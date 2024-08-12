@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Customer Support
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Description](#description)
+- [Features](#features)
+- [Deployment](#deployment)
+- [Running Locally](#running-locally)
+- [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The AI Customer Support Chatbot is a web application designed for the "Headstarter" platform, providing users with real-time assistance through an AI-powered chatbot. Built using Next.js and Anthropic Claude 3 Haiku, the chatbot offers intelligent responses to user inquiries, leveraging AWS Bedrock API for advanced Large Language Model (LLM) processing. The application is deployed on AWS EC2 for robust and scalable performance.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Intelligent Responses:** The chatbot dynamically interacts with users, providing context-aware and detailed answers based on the system prompt and LLM capabilities.
+- **System Prompt Control:** A structured system prompt ensures the chatbot adheres to predefined customer support guidelines.
+- **AWS Integration:** The application utilizes AWS Bedrock API and is deployed on AWS EC2, offering secure and efficient cloud-based operations.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The application is deployed on AWS EC2, utilizing AWS's reliable infrastructure for hosting and scaling.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To access the live application, please visit: [Headstarter Chatbot](#).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Running Locally
 
-## Deploy on Vercel
+To run the chatbot locally for development purposes, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Navigate to the project directory:**
+    ```bash
+    cd <repository_folder>
+    ```
+
+3. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4. **Set up environment variables:**
+   - Create a `.env` file in the root directory with the following content:
+     ```plaintext
+     accessKeyIdEnv=<your_aws_access_key_id>
+     secretAccessKeyEnv=<your_aws_secret_access_key>
+     ```
+
+5. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+   Open your browser and navigate to `http://localhost:3000` to view the application.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
